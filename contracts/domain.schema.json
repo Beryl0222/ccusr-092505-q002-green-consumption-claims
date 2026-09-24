@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "绿色消费凭证争议台领域事件",
+  "type": "object",
+  "required": [
+    "event_id",
+    "event_type",
+    "aggregate_type",
+    "aggregate_id",
+    "occurred_at",
+    "version",
+    "summary"
+  ],
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "CLAIM_PUBLISHED",
+        "EVIDENCE_RECEIVED",
+        "CASE_OPENED",
+        "MEDIATION_DECIDED",
+        "REMEDY_CONFIRMED"
+      ]
+    },
+    "aggregate_type": {
+      "type": "string",
+      "enum": [
+        "merchant_claim",
+        "consumer_order",
+        "evidence_item",
+        "mediation_case"
+      ]
+    },
+    "aggregate_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "occurred_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "additionalProperties": true
+}
