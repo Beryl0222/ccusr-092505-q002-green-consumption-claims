@@ -19,9 +19,13 @@
     "event_type": {
       "type": "string",
       "enum": [
+        "RULE_PUBLISHED",
         "CLAIM_PUBLISHED",
+        "ORDER_RECORDED",
+        "ORDER_AMENDED",
         "EVIDENCE_RECEIVED",
         "CASE_OPENED",
+        "CASE_FROZEN",
         "MEDIATION_DECIDED",
         "REMEDY_CONFIRMED"
       ]
@@ -29,6 +33,7 @@
     "aggregate_type": {
       "type": "string",
       "enum": [
+        "rule_book",
         "merchant_claim",
         "consumer_order",
         "evidence_item",
